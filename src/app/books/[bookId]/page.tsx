@@ -1,3 +1,5 @@
+import ReadListBtn from "@/components/bookDetails/ReadListBtn";
+import WishlishtBtn from "@/components/bookDetails/WishlishtBtn";
 import { IBook } from "@/types/books.type";
 import Image from "next/image";
 import Link from "next/link";
@@ -32,19 +34,7 @@ const BookDetailsPage = async ({
     );
   }
 
-  const {
-    bookId: id,
-    bookName,
-    author,
-    image,
-    review,
-    totalPages,
-    rating,
-    category,
-    tags,
-    publisher,
-    yearOfPublishing,
-  } = book;
+  const {bookId: id,bookName,author,image,review,totalPages,rating,category,tags,publisher,yearOfPublishing} = book;
 
   return (
     <main className="min-h-screen bg-base-200 py-10">
@@ -179,13 +169,10 @@ const BookDetailsPage = async ({
 
             {/* Actions */}
             <div className="flex flex-col sm:flex-row gap-3 mt-7">
-              <button className="btn btn-primary flex-1">
-                ❤️ Add to Wishlist
-              </button>
+                <WishlishtBtn book={book}></WishlishtBtn>
 
-              <button className="btn btn-outline flex-1">
-                📚 Start Reading
-              </button>
+              <ReadListBtn book={book}></ReadListBtn>
+
             </div>
 
             {/* More Information */}

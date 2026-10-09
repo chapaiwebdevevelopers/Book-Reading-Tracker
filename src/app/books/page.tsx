@@ -34,7 +34,7 @@ const Books = async () => {
 
           {/* Description */}
           <p className="text-base-content/60 mt-4 text-base md:text-lg leading-relaxed">
-            From bestselling novels to unforgettable classics, our collection has something for every reader. Browse our handpicked selection and find a book you'll love.
+            From bestselling novels to unforgettable classics, our collection has something for every reader. Browse our handpicked selection and find a book youll love.
           </p>
 
         </div>
